@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="blue">#33A8FF</color>
+
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="navi_new_bg_color">#ffffff</color>
+    <color name="colorGrey">#efeff4</color>
+    <color name="text_color">#575757</color>
+    <color name="tab_select_tv">#212121</color>
+    <color name="text_202020black">#202020</color>
+    <color name="tab_unselect_tv">#969696</color>
+    <color name="colorBackground">#F3F3F3</color>
+    <color name="fengexian">#f8f8f9</color>
+
+
+    <color name="tvtextcolor">#212121</color>
+    <color name="tvgrary">#676767</color>
+    <color name="bt_select">#FF5148</color>
+    <color name="bt_unselect">#ffa8a3</color>
+
+
+    <color name="dot_hong">#E73111</color>
+    <color name="text_bottom_comment">#9B9B9B</color>
+    <color name="order01">#ff4f48</color>
+    <color name="order02">#f7b85b</color>
+    <color name="order03">#adadad</color>
+
+</resources>
