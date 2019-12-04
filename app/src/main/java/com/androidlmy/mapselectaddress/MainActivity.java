@@ -1,11 +1,14 @@
 package com.androidlmy.mapselectaddress;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.androidlmy.mapselectaddress.map_navigation.NavigationActivity;
 import com.androidlmy.mapselectaddress.title_utils.StatusBarUtil;
+import com.androidlmy.mapselectaddress.track.TrackActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvAdress;
     @BindView(R.id.title)
     HeadCustomView title;
+    @BindView(R.id.tv_daohang)
+    TextView tvDaohang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +43,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.tv_adress)
-    public void onViewClicked() {
-        AddAddressActivity.show(this);
+    @OnClick({R.id.tv_daohang, R.id.tv_adress,R.id.tv_huizhi})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.tv_daohang:
+                NavigationActivity.show(this);
+                break;
+            case R.id.tv_adress:
+                AddAddressActivity.show(this);
+                break;
+            case R.id.tv_huizhi:
+                TrackActivity.show(this);
+                break;
+
+
+        }
     }
+
+
 }

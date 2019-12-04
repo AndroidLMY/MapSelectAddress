@@ -18,6 +18,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {       //避免重复导入库
+        exclude 'assets/location_map_gps_locked.png'
+
+        exclude 'assets/location_map_gps_3d.png'
+
+    }
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
@@ -39,12 +45,18 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     //仿京东地址需选择控件
     implementation 'liji.library.dev:citypickerview:4.3.2'
+
     //高德地图定位
     implementation 'com.amap.api:location:latest.integration'
-    //高德地图2d地图
+//    高德地图2d地图
     implementation 'com.amap.api:map2d:latest.integration'
     //高德地图搜索功能
     implementation 'com.amap.api:search:latest.integration'
+    //高德地图导航功能
+    implementation 'com.amap.api:navi-3dmap:latest.integration'
     //eventbus事件消息传递
     implementation 'org.greenrobot:eventbus:3.1.1'
+    //litepal数据存储
+    implementation 'org.litepal.android:java:3.0.0'
+
 }

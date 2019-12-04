@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="mapaddress" />
+    <version value="2" />
+    <list>
+        <mapping class="com.androidlmy.mapselectaddress.bean.TrackBean" />
+    </list>
+</litepal>

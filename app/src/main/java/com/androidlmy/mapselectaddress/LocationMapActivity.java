@@ -43,6 +43,7 @@ import com.amap.api.services.geocoder.RegeocodeQuery;
 import com.amap.api.services.geocoder.RegeocodeResult;
 import com.amap.api.services.poisearch.PoiResult;
 import com.amap.api.services.poisearch.PoiSearch;
+import com.androidlmy.mapselectaddress.bean.TrackBean;
 import com.androidlmy.mapselectaddress.title_utils.StatusBarUtil;
 
 import org.greenrobot.eventbus.EventBus;
@@ -155,6 +156,8 @@ public class LocationMapActivity extends AppCompatActivity implements ClickCallb
             @Override
             public void onCameraChangeFinish(CameraPosition cameraPosition) {
                 LogUtil.d("当前选中位置的经度:" + cameraPosition.target.latitude + "||纬度:" + cameraPosition.target.longitude);
+                TrackBean trackBean = new TrackBean(cameraPosition.target.latitude, cameraPosition.target.longitude);
+                trackBean.save();
                 //移动时候光标的缩放
                 startTransAnimator();
                 getAddressInfoByLatLong(cameraPosition.target.latitude, cameraPosition.target.longitude);
